@@ -12,4 +12,3 @@ lxml
 asyncio-throttle
 aiofiles
 python-dateutil
-python-dotenv

@@ -23,38 +23,16 @@ news_sentiment_analysis/
 ### 🔥 [finnhub_newsdata/](finnhub_newsdata/) - 核心新聞爬取工具
 **最重要的模組，提供完整的新聞數據獲取解決方案**
 
-#### 核心工具
-| 工具 | 功能 | 適用場景 |
-|------|------|----------|
-| `news.py` | 📰 基礎新聞查詢 | 快速測試、小量數據 |
-| `stock.py` | 📈 股票數據查詢 | 股價和K線數據 |
-| `crawl_50.py` | 🕷️ 進階新聞爬取 | 深度內容分析、URL解析 |
-| `analyze_finnhub_news_urls.py` | 🔍 URL 分析工具 | 新聞來源統計分析 |
-| `download_news_url.sh` | 📦 批量下載腳本 | S&P 500 大規模抓取 |
-| `crawl.py` | 🤖 智能爬蟲引擎 | 處理動態內容 |
-| `utils.py` | 🔧 核心工具庫 | 其他模組的基礎 |
-
 #### 主要功能
 - 📊 **新聞數據抓取**: 使用Finnhub API獲取金融新聞
-- 🔍 **智能URL解析**: 自動解析重定向，獲取真實新聞URL
-- 🕷️ **多層爬取策略**: Playwright、Crawl4AI等多種技術
-- 📈 **S&P 500 批量處理**: 支援500+公司新聞批量下載
-- 🔍 **新聞來源分析**: 統計各新聞網站的報導分佈
-- 🛡️ **反反爬蟲**: 處理Cloudflare等高級防護
+- 🕷️ **智能爬蟲**: 多種爬取策略（Playwright、Crawl4AI）
+- 📈 **批量處理**: 支援S&P 500公司新聞批量下載
+- 🔍 **URL分析**: 新聞來源域名統計和分析
 
 #### 快速開始
 ```bash
 cd finnhub_newsdata
-
-# 基礎功能測試
 python news.py --symbol AAPL --from-date 2024-01-01 --to-date 2024-12-31
-
-# 進階新聞爬取 (智能URL解析)
-python crawl_50.py --symbol AAPL --from-date 2024-01-01 --to-date 2024-01-31
-
-# S&P 500 批量下載
-chmod +x download_news_url.sh
-./download_news_url.sh
 ```
 
 ---
@@ -144,23 +122,13 @@ pip install -r requirements.txt
 ```
 
 ### 2. API配置
-**重要：** 所有工具都已改為從 `.env` 文件讀取 API 金鑰，更安全且易於管理。
-
 ```bash
-# 1. 創建 .env 文件
-cp .env.example .env
+# 設定Finnhub API金鑰
+export FINNHUB_API_KEY="您的API金鑰"
 
-# 2. 編輯 .env 文件，添加您的 Finnhub API 金鑰
-# .env 文件內容：
-FINNHUB_API_KEY=your_actual_api_key_here
-
-# 獲取免費 API 金鑰: https://finnhub.io/register
+# 或在相應的Python文件中直接設定
+API_KEY = "您的API金鑰"
 ```
-
-**注意：**
-- `.env` 文件已加入 `.gitignore`，不會被提交到版本控制
-- 所有模組會自動讀取此配置，無需手動設定環境變數
-- 如果未設定 API 金鑰，程式會顯示錯誤提示
 
 ### 3. 瀏覽器安裝（用於爬蟲）
 ```bash
@@ -185,7 +153,7 @@ playwright install
 1. **批量新聞URL收集**
    ```bash
    cd finnhub_newsdata
-   ./download_news_url.sh
+   ./download_aapl_news.sh
    ```
 
 2. **大規模內容抓取**

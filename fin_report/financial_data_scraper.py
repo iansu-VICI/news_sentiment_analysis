@@ -12,20 +12,9 @@ import time
 from datetime import datetime, timedelta
 from pathlib import Path
 import pandas as pd
-from dotenv import load_dotenv
 
-# 載入 .env 文件
-load_dotenv()
-
-# 從環境變量獲取 API 金鑰
-API_KEY = os.getenv("FINNHUB_API_KEY")
-
-if not API_KEY:
-    print("❌ 錯誤：請在 .env 文件中設定 FINNHUB_API_KEY")
-    print("請創建 .env 文件並添加: FINNHUB_API_KEY=your_api_key_here")
-    exit(1)
-
-# 初始化 Finnhub 客戶端
+# Finnhub API 配置
+API_KEY = "d0mplk1r01qi78nge0agd0mplk1r01qi78nge0b0"
 finnhub_client = finnhub.Client(api_key=API_KEY)
 
 class FinancialDataScraper:
