@@ -2,6 +2,9 @@
 
 這是一個完整的金融新聞情感分析工具集，提供從數據收集、處理到分析的端到端解決方案。
 
+## 財報數據
+可從 https://drive.google.com/drive/folders/1ZP_nAogCEAQ0Xu1cRouPal-Qx__RyfZZ?usp=drive_link 下載SP500的財報數據
+
 ## 📋 項目結構
 
 ```
@@ -119,13 +122,23 @@ pip install -r requirements.txt
 ```
 
 ### 2. API配置
-```bash
-# 設定Finnhub API金鑰
-export FINNHUB_API_KEY="您的API金鑰"
+**重要：** 所有工具都已改為從 `.env` 文件讀取 API 金鑰，更安全且易於管理。
 
-# 或在相應的Python文件中直接設定
-API_KEY = "您的API金鑰"
+```bash
+# 1. 創建 .env 文件
+cp .env.example .env
+
+# 2. 編輯 .env 文件，添加您的 Finnhub API 金鑰
+# .env 文件內容：
+FINNHUB_API_KEY=your_actual_api_key_here
+
+# 獲取免費 API 金鑰: https://finnhub.io/register
 ```
+
+**注意：**
+- `.env` 文件已加入 `.gitignore`，不會被提交到版本控制
+- 所有模組會自動讀取此配置，無需手動設定環境變數
+- 如果未設定 API 金鑰，程式會顯示錯誤提示
 
 ### 3. 瀏覽器安裝（用於爬蟲）
 ```bash

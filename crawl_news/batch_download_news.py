@@ -17,6 +17,19 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict
 from threading import Lock
+from dotenv import load_dotenv
+
+# 載入 .env 文件
+load_dotenv()
+
+def get_api_key():
+    """獲取 Finnhub API 金鑰"""
+    api_key = os.getenv("FINNHUB_API_KEY")
+    if not api_key:
+        print("❌ 錯誤：請在 .env 文件中設定 FINNHUB_API_KEY")
+        print("請創建 .env 文件並添加: FINNHUB_API_KEY=your_api_key_here")
+        exit(1)
+    return api_key
 
 # 將當前目錄加入 import 路徑
 sys.path.append(str(Path(__file__).parent))
@@ -28,19 +41,11 @@ except ImportError:
     sys.exit(1)
 
 try:
-    from utils import get_api_key, validate_date_format
+    from utils import validate_date_format
 except ImportError:
-    # 後備實作 (僅供測試)
-    def get_api_key():
-        return os.getenv("FINNHUB_API_KEY", "YOUR_FINNHUB_API_KEY")
-
-    def validate_date_format(date_str: str) -> bool:
-        try:
-            datetime.strptime(date_str, "%Y-%m-%d")
-            return True
-        except ValueError:
-            return False
-
+    print("❌ 錯誤: 無法導入 utils 模組")
+    print("請確保 utils.py 在相同目錄下")
+    sys.exit(1)
 
 class BatchNewsDownloader:
     """批量新聞下載器 (支援跨月份並發)"""

@@ -8,16 +8,19 @@ import json
 import os
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
+from dotenv import load_dotenv
 
-# 預設 API 金鑰 (請替換為您的金鑰)
-DEFAULT_API_KEY = "d0mplk1r01qi78nge0agd0mplk1r01qi78nge0b0"
+# 載入 .env 文件
+load_dotenv()
 
 def get_api_key() -> str:
-    """
-    獲取 API 金鑰
-    優先順序: 環境變數 > 預設值
-    """
-    return os.getenv("FINNHUB_API_KEY", DEFAULT_API_KEY)
+    """獲取 Finnhub API 金鑰，優先從環境變數讀取"""
+    api_key = os.getenv("FINNHUB_API_KEY")
+    if not api_key:
+        print("❌ 錯誤：請在 .env 文件中設定 FINNHUB_API_KEY")
+        print("請創建 .env 文件並添加: FINNHUB_API_KEY=your_api_key_here")
+        exit(1)
+    return api_key
 
 def create_finnhub_client(api_key: str = None) -> finnhub.Client:
     """
