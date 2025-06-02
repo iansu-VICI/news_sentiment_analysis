@@ -476,13 +476,40 @@ def parse_args():
 if __name__ == "__main__":
     if API_KEY == "YOUR_FINNHUB_API_KEY":
         print("請先在程式碼中設定您的 API_KEY")
+        exit(1)
     else:
         # 解析命令列參數
         args = parse_args()
         
-        # 根據新聞類型調用相應的函式
-        if args.type == 'company':
-            display_company_news(args.symbol, args.from_date, args.to_date, 
-                                args.download_articles, args.output_dir, args.headless)
-        else:  # market news
-            display_market_news(args.category, args.min_id)
+        try:
+            # 根據新聞類型調用相應的函式
+            if args.type == 'company':
+                result = display_company_news(args.symbol, args.from_date, args.to_date, 
+                                            args.download_articles, args.output_dir, args.headless)
+                
+                # 檢查結果並決定退出碼
+                if result is not None and len(result) > 0:
+                    # 檢查是否有成功生成的輸出文件
+                    import os
+                    output_file = os.path.join(args.output_dir, f"{args.symbol.lower()}.json")
+                    if os.path.exists(output_file):
+                        print(f"✅ 成功完成處理，輸出文件: {output_file}")
+                        exit(0)  # 成功
+                    else:
+                        print(f"❌ 雖然獲取了新聞但未生成輸出文件")
+                        exit(1)  # 失敗
+                else:
+                    print(f"❌ 未獲取到任何新聞資料")
+                    exit(1)  # 失敗
+            else:  # market news
+                result = display_market_news(args.category, args.min_id)
+                if result is not None:
+                    exit(0)  # 成功
+                else:
+                    exit(1)  # 失敗
+                    
+        except Exception as e:
+            print(f"❌ 程式執行時發生錯誤: {e}")
+            import traceback
+            traceback.print_exc()
+            exit(1)  # 失敗

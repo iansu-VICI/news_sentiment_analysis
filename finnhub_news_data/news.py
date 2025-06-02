@@ -73,7 +73,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='獲取金融新聞')
     parser.add_argument('--type', type=str, choices=['company', 'market'], default='company',
                       help='新聞類型: company (公司新聞) 或 market (市場新聞)')
-    parser.add_argument('--symbol', type=str, default='AAPL',
+    parser.add_argument('--symbol', type=str, default='MSFT',
                       help='公司股票代碼 (預設: AAPL)')
     parser.add_argument('--from-date', type=str,
                       help='起始日期 (YYYY-MM-DD格式，預設: 一週前)')
