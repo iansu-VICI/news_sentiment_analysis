@@ -4,6 +4,7 @@
 # 使用GNU parallel按公司並行處理，大幅提升處理速度
 
 # 設定參數
+
 MAX_JOBS=4  # 最大並發數量，避免API限制
 PROGRESS_FILE="./step1_progress.txt"
 LOG_FILE="./step1_parallel_log.txt"
