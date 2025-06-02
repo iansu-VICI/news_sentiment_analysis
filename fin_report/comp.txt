@@ -1,0 +1,23 @@
+main_tickers:
+  - ASML
+  - TSM
+  - NVDA
+  - V
+  - GOOG
+  - ISRG
+  - ILMN
+  - LYV
+  - SPGI
+  - ADBE
+
+competitors:
+  ASML: [CAJ, NINOY, LRCX]
+  TSM:  [005930.KS, GFS, INTC]
+  NVDA: [AMD, INTC, AVGO]
+  V:    [MA, AXP, DFS]
+  GOOG: [MSFT, META, BIDU]
+  ISRG: [MDT, SYK, JNJ]
+  ILMN: [TMO, DHR, PACB]
+  LYV:  [EB, MSGE, CMCSA]
+  SPGI: [MCO, MSCI, ICE]
+  ADBE: [ADSK, CRM, ANSS]

@@ -1,0 +1,14 @@
+finnhub-python
+pandas
+numpy
+argparse
+requests
+beautifulsoup4
+readability-lxml
+playwright
+PyYAML
+crawl4ai
+lxml
+asyncio-throttle
+aiofiles
+python-dateutil
