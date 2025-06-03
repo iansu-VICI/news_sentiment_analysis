@@ -1,0 +1,406 @@
+标题: Are Peloton's Bikes Just Loss Leaders? | Nasdaq
+URL: https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28
+爬取时间: 2025-06-03T01:12:27.462939
+发布日期: N/A
+作者: N/A
+--------------------------------------------------------------------------------
+
+[Skip to main content](https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28#main-content)
+[ ](https://www.nasdaq.com/ "Nasdaq Homepage Logo")
+  * [ Nasdaq+ ](https://www.nasdaq.com/plus/dashboard)
+  * [ Weekly Macro+ ](https://www.nasdaq.com/nasdaqmacroplus)
+  * [ Scorecard ](https://www.nasdaq.com/plus/scorecard)
+  * Market Activity
+    * [ U.S. Market Activity -> ](https://www.nasdaq.com/market-activity)
+      * [Stocks](https://www.nasdaq.com/market-activity/stocks)
+      * [Options](https://www.nasdaq.com/market-activity/quotes/option-chain)
+      * [ETFs](https://www.nasdaq.com/market-activity/etf)
+      * [Mutual Funds](https://www.nasdaq.com/market-activity/mutual-fund)
+      * [Indexes](https://www.nasdaq.com/market-activity/indexes)
+      * [Cryptocurrency](https://www.nasdaq.com/market-activity/cryptocurrency)
+      * [Currencies](https://www.nasdaq.com/market-activity/currencies)
+      * [Fixed Income](https://www.nasdaq.com/market-activity/fixed-income)
+Trading & Market Services 
+      * [North American Markets](https://www.nasdaq.com/solutions/north-american-markets)
+      * [Nasdaq-100 Index](https://www.nasdaq.com/solutions/global-indexes/nasdaq-100)
+      * [Nasdaq-100 Index Options](https://www.nasdaq.com/nasdaq-100-options-xnd-ndx)
+      * [Market Data](https://www.nasdaq.com/solutions/data/equities)
+    * [ European Markets -> ](https://www.nasdaq.com/european-market-activity)
+      * [Shares](https://www.nasdaq.com/european-market-activity/shares)
+      * [Indexes](https://www.nasdaq.com/european-market-activity/indexes)
+      * [Fixed Income](https://www.nasdaq.com/european-market-activity/corporate-bonds)
+      * [Options & Futures](https://www.nasdaq.com/european-market-activity/options-futures)
+      * [ETPs](https://www.nasdaq.com/european-market-activity/etp)
+      * [Warrants & Certificates](https://www.nasdaq.com/european-market-activity/warrants-certificates)
+      * [Funds](https://www.nasdaq.com/european-market-activity/funds)
+      * [News](https://www.nasdaq.com/european-market-activity/news/company-news)
+      * [European Commodities](https://www.nasdaq.com/european-market-activity/commodities/todays-trading)
+[ Market Regulation -> ](https://www.nasdaq.com/market-regulation)
+      * [U.S. Regulation](https://www.nasdaq.com/market-regulation/americas)
+      * [European Regulation](https://www.nasdaq.com/market-regulation/nordics)
+    * U.S. Market Quick Links 
+      * [After-Hours Quotes](https://www.nasdaq.com/market-activity/after-hours)
+      * [Pre-Market Quotes](https://www.nasdaq.com/market-activity/pre-market)
+      * [Nasdaq-100](https://www.nasdaq.com/market-activity/quotes/nasdaq-ndx-index)
+      * [Symbol Screener](https://www.nasdaq.com/market-activity/stocks/screener)
+      * [Glossary](https://www.nasdaq.com/glossary)
+      * [Symbol Change History](https://www.nasdaq.com/market-activity/stocks/symbol-change-history)
+      * [IPO Performance](https://www.nasdaq.com/market-activity/ipo-performance)
+      * [Ownership Search](https://www.nasdaq.com/market-activity/search-ownership)
+      * [Dividend History](https://www.nasdaq.com/market-activity/quotes/dividend-history)
+    * U.S. Market Events 
+      * [Economic Calendar](https://www.nasdaq.com/market-activity/economic-calendar)
+      * [Earnings](https://www.nasdaq.com/market-activity/earnings)
+      * [IPO Calendar](https://www.nasdaq.com/market-activity/ipos)
+      * [Dividend Calendar](https://www.nasdaq.com/market-activity/dividends)
+      * [SPO Calendar](https://www.nasdaq.com/market-activity/spos)
+      * [Holiday Schedule](https://www.nasdaq.com/market-activity/stock-market-holiday-schedule)
+U.S. Markets Analyst Activity 
+      * [Daily Earnings Surprise](https://www.nasdaq.com/market-activity/earnings/daily-earnings-surprise)
+      * [Forecast Changes](https://www.nasdaq.com/market-activity/analyst-forecast-change)
+Nasdaq U.S. Data 
+      * [Statistical Milestones](https://www.nasdaq.com/market-activity/statistical-milestones)
+      * [Daily Market Statistics](https://www.nasdaq.com/market-activity/daily-market-statistics)
+      * [Most Active](https://www.nasdaq.com/market-activity/most-active)
+[ Explore All U.S. Market Activity -> ](https://www.nasdaq.com/market-activity)
+  * Insights
+    * Insights + News 
+      * [Nasdaq Newsroom](https://www.nasdaq.com/newsroom)
+      * [Nasdaq Newsletters](https://www.nasdaq.com/newsletters)
+      * [FinTech News](https://www.nasdaq.com/solutions/fintech/news-and-insights)
+      * [Driving Excellence](https://www.nasdaq.com/news-and-insights/driving-excellence)
+      * [Complexity Report](https://www.nasdaq.com/complexity-report-2025)
+      * [Global Financial Crime Report](https://www.nasdaq.com/global-financial-crime-report)
+      * [ETF Retail Investor Survey](https://www.nasdaq.com/solutions/nasdaq-etf-retail-study)
+    * Nasdaq Originals 
+      * [Frontiers of the Future](https://www.nasdaq.com/frontiers-of-the-future)
+      * [The Winning Formula](https://www.nasdaq.com/winning-formula)
+      * [Question Today](https://www.nasdaq.com/question-today-video-series)
+      * [TradeTalks](https://www.nasdaq.com/tradetalks)
+      * [Journey Across the Financial System](https://www.nasdaq.com/journey-across-financial-system)
+      * [Meet Me @ MarketSite](https://www.nasdaq.com/meet-me-at-marketsite)
+    * Perspectives 
+      * [Market Makers with Phil Mackintosh](https://www.nasdaq.com/market-makers)
+      * [Options with Kevin Davitt](https://www.nasdaq.com/authors/kevin-davitt)
+      * [Regulatory Roundup with Tony Sio](https://www.nasdaq.com/solutions/fintech/regulatory-roundup)
+      * [ESG Trendsetters](https://www.nasdaq.com/news-and-insights/esg-trendsetters)
+      * [Global Indexes: Research Insights](https://www.nasdaq.com/solutions/global-indexes/research-insights)
+      * [Nasdaq ETF Issuer Hub](https://www.nasdaq.com/solutions/etf-issuers-insights)
+      * [TradeTalks Newsletter](https://www.nasdaq.com/tradetalks-newsletter-archive)
+      * [Just for Funds](https://www.nasdaq.com/just-for-funds)
+    * Education 
+      * [C02 Removals](https://www.nasdaq.com/solutions/carbon-removal-corc-dataset)
+      * [Derivatives Academy](https://www.nasdaq.com/derivatives-academy)
+      * [FinTech Education & Learning Services](https://www.nasdaq.com/solutions/fintech/services/education-learning)
+      * [Nasdaq Center for Board Excellence](https://www.nasdaq.com/authors/nasdaq-center-board-excellence)
+      * [Nasdaq ETF Education](https://www.nasdaq.com/solutions/nasdaq-etf-insights-and-education)
+      * [Nasdaq IPO Academy](https://www.nasdaq.com/Nasdaq-IPO-Academy)
+[ Explore Our Newsroom -> ](https://www.nasdaq.com/newsroom)
+  * Solutions
+    * [ Access Global Markets -> ](https://www.nasdaq.com/solutions/trade-global-markets)
+      * [Public Markets (Listings)](https://www.nasdaq.com/solutions/listings/list-your-company)
+      * [North American Markets](https://www.nasdaq.com/solutions/north-american-markets)
+      * [European Markets](https://www.nasdaq.com/european-markets)
+      * [Private Markets](https://www.nasdaqprivatemarket.com/)
+      * [Nasdaq Fund Secondaries](https://www.nasdaq.com/solutions/fund-secondaries)
+Featured Solutions 
+      * [Nasdaq's IPO Process](https://www.nasdaq.com/solutions/nasdaq-ipo-execution)
+      * [ETF Listings](https://www.nasdaq.com/solutions/nasdaq-etf-listings)
+      * [Nasdaq-100 Index Options](https://www.nasdaq.com/nasdaq-100-options-xnd-ndx)
+      * [Derivatives Academy](https://www.nasdaq.com/derivatives-academy)
+    * Drive Growth with Insights 
+      * [Investment Intelligence](https://www.nasdaq.com/solutions/investment-intelligence)
+      * [Market & Alternative Datasets](https://data.nasdaq.com/)
+      * [Nasdaq Index Solutions](https://www.nasdaq.com/solutions/global-indexes)
+Featured Solutions 
+      * [Nasdaq Data Link](https://www.nasdaq.com/nasdaq-data-link)
+      * [Nasdaq-100 Index](https://www.nasdaq.com/solutions/global-indexes/nasdaq-100)
+      * [Nasdaq Dorsey Wright](https://www.nasdaq.com/solutions/global-indexes/nasdaq-dorsey-wright)
+      * [Nasdaq eVestment™](https://www.nasdaq.com/solutions/evestment)
+      * [Nasdaq Solovis](https://www.nasdaq.com/solutions/solovis)
+    * Advance with Technology 
+      * [Financial Technology](https://www.nasdaq.com/solutions/fintech)
+      * [Financial Crime Management Technology](https://www.nasdaq.com/solutions/anti-financial-crime-technology)
+      * [Global Connectivity Services](https://www.nasdaq.com/solutions/nasdaq-connectivity)
+Featured Solutions 
+      * [Nasdaq AxiomSL](https://www.nasdaq.com/solutions/fintech/nasdaq-axiomsl)
+      * [Nasdaq Calypso](https://www.nasdaq.com/solutions/fintech/nasdaq-calypso)
+      * [Nasdaq Eqlipse](https://www.nasdaq.com/solutions/fintech/nasdaq-eqlipse)
+      * [Nasdaq Trade Surveillance](https://www.nasdaq.com/solutions/fintech/nasdaq-trade-surveillance)
+    * Accelerate Your Strategy 
+      * [Governance Solutions](https://www.nasdaq.com/solutions/governance)
+      * [Sustainability Solutions](https://www.nasdaq.com/solutions/sustainability)
+      * [Investor Relations Intelligence](https://www.nasdaq.com/solutions/investor-relations-intelligence)
+Featured Solutions 
+      * [Nasdaq Boardvantage®](https://www.nasdaq.com/solutions/governance/boardvantage)
+      * [Board Evaluations](https://www.nasdaq.com/solutions/governance/board-evaluations)
+      * [Nasdaq IR Insight®](https://www.nasdaq.com/nasdaq-ir-insight)
+      * [Nasdaq Metrio](https://www.nasdaq.com/solutions/corporate-esg-solutions/metrio)
+[ Explore All Solutions -> ](https://www.nasdaq.com/solutions)
+  * About
+    *       * [ Our People -> ](https://www.nasdaq.com/about/our-people)
+      * [ Board of Directors -> ](https://www.nasdaq.com/about/board-of-directors)
+      * [ Careers -> ](https://www.nasdaq.com/about/careers)
+      * [ Contact -> ](https://www.nasdaq.com/contact-us)
+    * Quick Links 
+      * [Question Today](https://www.nasdaq.com/rewritetomorrow)
+      * [Nasdaq MarketSite](https://www.nasdaq.com/marketsite)
+      * [Investor Relations](http://ir.nasdaq.com/)
+      * [ESG Reporting Guide](https://www.nasdaq.com/ESG-Guide)
+      * [European Markets](https://www.nasdaq.com/European-Markets)
+      * [Nasdaq Nordic Foundation](https://www.nasdaq.com/nasdaq-nordic-foundation)
+      * [Nasdaq Thought Leadership](https://www.nasdaq.com/authors/marketinsite)
+    * Nasdaq Initiatives 
+      * [Purpose](https://www.nasdaq.com/nasdaq-purpose)
+      * [Market Structure Policy Advocacy](https://www.nasdaq.com/equities-market-structure-policy)
+      * [Public Policy Advocacy](https://www.nasdaq.com/public-policy)
+      * [ESG at Nasdaq](https://www.nasdaq.com/esg)
+      * [Nasdaq Entrepreneurial Center](https://www.nasdaq.com/nasdaq-entrepreneurial-center)
+      * [Nasdaq Ventures](https://www.nasdaq.com/nasdaq-ventures)
+      * [Nasdaq and the Cloud](https://www.nasdaq.com/cloud)
+[ Explore All About -> ](https://www.nasdaq.com/about)
+  * [Log in](https://www.nasdaq.com/user/login)
+
+
+[Sign In](https://www.nasdaq.com/user/login "Account Login") [ ](https://www.nasdaq.com/user/login "Log in")
+[](javascript:void\(0\);)
+[ AAPL +0.42% ](https://www.nasdaq.com/market-activity/stocks/aapl)
+[ TSLA -1.09% ](https://www.nasdaq.com/market-activity/stocks/tsla)
+[ AMZN +0.80% ](https://www.nasdaq.com/market-activity/stocks/amzn)
+[ META +3.62% ](https://www.nasdaq.com/market-activity/stocks/meta)
+[ AMD +3.52% ](https://www.nasdaq.com/market-activity/stocks/amd)
+[ NVDA +1.67% ](https://www.nasdaq.com/market-activity/stocks/nvda)
+[ PEP -0.41% ](https://www.nasdaq.com/market-activity/stocks/pep)
+[ COST +1.60% ](https://www.nasdaq.com/market-activity/stocks/cost)
+[ ADBE -2.82% ](https://www.nasdaq.com/market-activity/stocks/adbe)
+[ GOOG -1.43% ](https://www.nasdaq.com/market-activity/stocks/goog)
+[ AMGN +0.10% ](https://www.nasdaq.com/market-activity/stocks/amgn)
+[ HON -0.51% ](https://www.nasdaq.com/market-activity/stocks/hon)
+[ INTC +0.97% ](https://www.nasdaq.com/market-activity/stocks/intc)
+[ INTU +1.53% ](https://www.nasdaq.com/market-activity/stocks/intu)
+[ NFLX +0.97% ](https://www.nasdaq.com/market-activity/stocks/nflx)
+[ ADP +0.08% ](https://www.nasdaq.com/market-activity/stocks/adp)
+[ SBUX +1.48% ](https://www.nasdaq.com/market-activity/stocks/sbux)
+[ MRNA +1.84% ](https://www.nasdaq.com/market-activity/stocks/mrna)
+[ AAPL +0.42% ](https://www.nasdaq.com/market-activity/stocks/aapl)
+[ TSLA -1.09% ](https://www.nasdaq.com/market-activity/stocks/tsla)
+[ AMZN +0.80% ](https://www.nasdaq.com/market-activity/stocks/amzn)
+[ META +3.62% ](https://www.nasdaq.com/market-activity/stocks/meta)
+[ AMD +3.52% ](https://www.nasdaq.com/market-activity/stocks/amd)
+[ NVDA +1.67% ](https://www.nasdaq.com/market-activity/stocks/nvda)
+[ PEP -0.41% ](https://www.nasdaq.com/market-activity/stocks/pep)
+[ COST +1.60% ](https://www.nasdaq.com/market-activity/stocks/cost)
+[ ADBE -2.82% ](https://www.nasdaq.com/market-activity/stocks/adbe)
+[ GOOG -1.43% ](https://www.nasdaq.com/market-activity/stocks/goog)
+[ AMGN +0.10% ](https://www.nasdaq.com/market-activity/stocks/amgn)
+[ HON -0.51% ](https://www.nasdaq.com/market-activity/stocks/hon)
+[ INTC +0.97% ](https://www.nasdaq.com/market-activity/stocks/intc)
+[ INTU +1.53% ](https://www.nasdaq.com/market-activity/stocks/intu)
+[ NFLX +0.97% ](https://www.nasdaq.com/market-activity/stocks/nflx)
+[ ADP +0.08% ](https://www.nasdaq.com/market-activity/stocks/adp)
+[ SBUX +1.48% ](https://www.nasdaq.com/market-activity/stocks/sbux)
+[ MRNA +1.84% ](https://www.nasdaq.com/market-activity/stocks/mrna)
+[ AAPL +0.42% ](https://www.nasdaq.com/market-activity/stocks/aapl)
+[ TSLA -1.09% ](https://www.nasdaq.com/market-activity/stocks/tsla)
+[ AMZN +0.80% ](https://www.nasdaq.com/market-activity/stocks/amzn)
+[ META +3.62% ](https://www.nasdaq.com/market-activity/stocks/meta)
+[ AMD +3.52% ](https://www.nasdaq.com/market-activity/stocks/amd)
+[ NVDA +1.67% ](https://www.nasdaq.com/market-activity/stocks/nvda)
+[ PEP -0.41% ](https://www.nasdaq.com/market-activity/stocks/pep)
+[ COST +1.60% ](https://www.nasdaq.com/market-activity/stocks/cost)
+[ ADBE -2.82% ](https://www.nasdaq.com/market-activity/stocks/adbe)
+[ GOOG -1.43% ](https://www.nasdaq.com/market-activity/stocks/goog)
+[ AMGN +0.10% ](https://www.nasdaq.com/market-activity/stocks/amgn)
+[ HON -0.51% ](https://www.nasdaq.com/market-activity/stocks/hon)
+[ INTC +0.97% ](https://www.nasdaq.com/market-activity/stocks/intc)
+[ INTU +1.53% ](https://www.nasdaq.com/market-activity/stocks/intu)
+[ NFLX +0.97% ](https://www.nasdaq.com/market-activity/stocks/nflx)
+[ ADP +0.08% ](https://www.nasdaq.com/market-activity/stocks/adp)
+[ SBUX +1.48% ](https://www.nasdaq.com/market-activity/stocks/sbux)
+[ MRNA +1.84% ](https://www.nasdaq.com/market-activity/stocks/mrna)
+[Markets](https://www.nasdaq.com/news-and-insights/topic/markets)
+[ PTON -7.04% ](https://www.nasdaq.com/market-activity/stocks/PTON)
+[ ![The Motley Fool-Logo](https://www.nasdaq.com/sites/acquia.prod/files/2022/09/28/Motley%20Fool.png) ](https://www.nasdaq.com/publishers/the-motley-fool)
+#  Are Peloton's Bikes Just Loss Leaders? 
+February 28, 2021 — 07:22 am EST
+Written by Brian Withers for [ The Motley Fool-> ](https://www.nasdaq.com/publishers/the-motley-fool)
+  * [ ](https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.nasdaq.com%2Farticles%2Fare-pelotons-bikes-just-loss-leaders-2021-02-28&title=Are Peloton's Bikes Just Loss Leaders?&source=nasdaq.com)
+  * [ ](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nasdaq.com%2Farticles%2Fare-pelotons-bikes-just-loss-leaders-2021-02-28)
+  * [ ](https://x.com/intent/post?url=https%3A%2F%2Fwww.nasdaq.com%2Farticles%2Fare-pelotons-bikes-just-loss-leaders-2021-02-28&text=)
+  *   * [ ](http://www.reddit.com/submit?url=https%3A%2F%2Fwww.nasdaq.com%2Farticles%2Fare-pelotons-bikes-just-loss-leaders-2021-02-28&title=Are Peloton's Bikes Just Loss Leaders?)
+
+
+**Peloton** [(NASDAQ: PTON)](https://www.nasdaq.com/market-activity/stocks/pton) sells a high-end spin bike to get its members into a subscription for its live-class monthly subscription. Given this razor-and-blades business model, you might think that it's selling its equipment at cost to attract customers. But that's far from what's happening. Motley Fool analyst Tim Beyers and Fool contributor Brian Withers explain the cost structure and gross margins of the business on a _Fool Live_ episode **recorded on Feb. 8** , and discuss why there's even more opportunity to improve margins over time.
+**10 stocks we like better than Peloton Interactive** When investing geniuses David and Tom Gardner have a stock tip, it can pay to listen. After all, the newsletter they have run for over a decade, _Motley Fool Stock Advisor_ , has tripled the market.*
+David and Tom just revealed what they believe are the [ten best stocks](https://api.fool.com/infotron/infotrack/click?apikey=35527423-a535-4519-a07f-20014582e03e&url=https%3A%2F%2Fwww.fool.com%2Fmms%2Fmark%2Fe-foolcom-sa-bbn-dyn%3Faid%3D8867%26source%3Disaeditxt0010449%26ftm_cam%3Dsa-bbn-evergreen%26ftm_pit%3D6312%26ftm_veh%3Dbbn_article_pitch%26company%3DPeloton%2520Interactive&impression=4d291492-d81a-4c8b-aeb2-930d58962773&utm_source=nasdaq&utm_medium=feed&utm_campaign=article&referring_guid=25e10834-5221-4bff-9a83-b3e45f2e7e6e) for investors to buy right now... and Peloton Interactive wasn't one of them! That's right -- they think these 10 stocks are even better buys.
+[See the 10 stocks](https://api.fool.com/infotron/infotrack/click?apikey=35527423-a535-4519-a07f-20014582e03e&url=https%3A%2F%2Fwww.fool.com%2Fmms%2Fmark%2Fe-foolcom-sa-bbn-dyn%3Faid%3D8867%26source%3Disaeditxt0010449%26ftm_cam%3Dsa-bbn-evergreen%26ftm_pit%3D6312%26ftm_veh%3Dbbn_article_pitch%26company%3DPeloton%2520Interactive&impression=4d291492-d81a-4c8b-aeb2-930d58962773&utm_source=nasdaq&utm_medium=feed&utm_campaign=article&referring_guid=25e10834-5221-4bff-9a83-b3e45f2e7e6e)
+ __*Stock Advisor returns as of November 20, 2020__
+**Brian Withers:** He [a viewer named Brendan] asked whether the Connected Fitness products are a loss leader. This is the costs, the product sale at 870 million and their cost of goods sold is 562 [million], so they are making a gross margin of 35 percent on the Connected Fitness products. To me, that's pretty impressive.
+**Tim Beyers:** It's not just pretty impressive, Brian. That is **Apple** -like. [LAUGHTER] Let's be clear. I don't want to undersell that. That is an Apple-like gross margin, Brendan. That is a phenomenal gross margin on hardware. I mean, at the risk of overselling it, once you start getting either close to or into the 40s, and Peloton's been in the 40s before, they've deliberately brought that number down as they've lowered the price on the bike. They've actually lowered it deliberately down to 35 percent because they could. They have a bananas gross margin on their hardware. Thank you for showing that, Brian. Yes, that is exactly what I was talking about.
+**Brian Withers:** Well, it could also be higher because they're spending all this time [and money] expediting too.
+**Tim Beyers:** Right.
+**Brian Withers:** The other thing that Precor, I'm getting my manufacturing and distribution background back up, [LAUGHTER] Precor is going to bring some design for manufacturing, design for reliability, design for long term stuff to Peloton that they may or may not have figured out yet. I saw **Fitbit** started as an early company and once they were a little ways in and they started to get to mass market, they brought in a Chief Operating Officer who understood warranty costs. You're familiar with circuit breakers?
+**Tim Beyers:** Yeah.
+**Brian Withers:** Similar in product design, a circuit breaker busts, and it's a cheap thing so that you don't ruin your TV, which is an expensive thing. So when you have a warranty thing, you want to break the cheap parts and you what the cheap parts to wear out, and you want them to be easy to ship and replace at a customer. I don't know the way the Peloton bike is set up, I've watched your last deep dive with, I was back in August.
+**Tim Beyers:** Abby?
+**Brian Withers:** Abby, yes. You said that Seth said they make cheap bikes [LAUGHTER] they're crap.
+**Tim Beyers:** Yeah. But let's put that in context. Seth builds bikes. Seth is an expert. Seth knows more in his pinkie [LAUGHTER] about bikes than I will ever know about bikes in my entire life.
+Like if he says that the quality on the build of a Peloton bike is not up to par, I believe him and I believe that for the audience that he is, that wants something that is very professional and to spend the amount of money he's spending. Like he wants the equipment to be top-notch. That is not how Peloton is thinking about premium pricing. Their premium price is not in the hardware of the bike even though they consider it decent. But I'm going to go with Seth on this one, the premium that they're putting into it is the community and the content. Like the content is the piece where Peloton is putting a lot of their money into it. I mean, they're putting money into a partnership with Beyoncé. That should tell you a lot.
+**Brian Withers:** Yeah. Well, I think there's opportunity even with the bike though, when you talk about those gross margins, I look at Precor. Precor was founded in 1980, so they have 40 years of manufacturing stuff that gets beat to crap every day in a gym and I'm sure they have a refurb program and a warranty program, and the gym's calling these guys up going, "My thing broke," that's the last thing that they want. This partnership is so smart and I think they're going to make their bikes way better over time and bring in the manufacturing smarts of the heavy equipment [manufacturer matched] with the digital capabilities [of Peloton].
+I think it's an exciting match.
+_[Brian Withers](http://boards.fool.com/profile/TMFBwithbike/info.aspx) owns shares of Apple. [Tim Beyers](http://boards.fool.com/profile/TMFMileHigh/info.aspx) owns shares of Apple and Peloton Interactive. The Motley Fool owns shares of and recommends Apple and Peloton Interactive. The Motley Fool has a [disclosure policy](http://www.fool.com/Legal/fool-disclosure-policy.aspx)._
+The views and opinions expressed herein are the views and opinions of the author and do not necessarily reflect those of Nasdaq, Inc.
+###  Tags 
+[Markets](https://www.nasdaq.com/news-and-insights/topic/markets)
+[ ![The Motley Fool logo](https://www.nasdaq.com/sites/acquia.prod/files/styles/130x40/public/2022/09/28/Motley%20Fool.png?itok=qVFFHTyc) ](https://www.nasdaq.com/publishers/the-motley-fool)
+[ The Motley Fool ](https://www.nasdaq.com/publishers/the-motley-fool)
+Founded in 1993 in Alexandria, VA., by brothers David and Tom Gardner, The Motley Fool is a multimedia financial-services company dedicated to building the world's greatest investment community. Reaching millions of people each month through its website, books, newspaper column, radio show, television appearances, and subscription newsletter services, The Motley Fool champions shareholder values and advocates tirelessly for the individual investor. The company's name was taken from Shakespeare, whose wise fools both instructed and amused, and could speak the truth to the king -- without getting their heads lopped off. 
+[ Visit Fool.com for more market news-> ](https://www.fool.com/) [ More articles by this source-> ](https://www.nasdaq.com/publishers/the-motley-fool)
+### Stocks mentioned
+PTON
+AAPL
+## More Related Articles 
+![Info icon](https://www.nasdaq.com/themes/nsdq/dist/assets/images/circle-info.svg)
+This data feed is not available at this time.  
+---  
+Data is currently not available 
+  * •
+
+
+###  Sign up for the TradeTalks newsletter to receive your weekly dose of trading news, trends and education. Delivered Wednesdays. 
+  * [ Investor Relations ](http://ir.nasdaq.com/ "Nasdaq Investor Relations Information")
+  * [ Contact ](https://www.nasdaq.com/contact-us "Contact Nasdaq")
+  * [ Careers ](https://www.nasdaq.com/about/careers "Careers at Nasdaq")
+  * [ Advertise ](https://www.nasdaq.com/advertising)
+  * [ Mobile Apps ](https://www.nasdaq.com/app/nasdaq-markets "Mobile Apps")
+  * [ Nasdaq MarketSIte ](https://www.nasdaq.com/marketsite)
+  * [ Trust Center ](https://www.nasdaq.com/trust-center)
+  * [ Newsletters ](https://www.nasdaq.com/newsletters)
+  * [ Accessibility ](https://www.nasdaq.com/nasdaq-accessibility-commitment)
+
+
+  * [ Privacy Policy ](https://www.nasdaq.com/privacy-statement "Nasdaq, Inc. and affiliated companies privacy policy")
+  * [ Cookies ](https://www.nasdaq.com/cookie-statement)
+  * [ Legal ](https://www.nasdaq.com/legal)
+  * [Do Not Sell or Share My Personal Information](https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28 "Do Not Sell or Share My Personal Information")
+
+
+  * [](https://www.facebook.com/Nasdaq/ "Visit NASDAQ on Facebook")
+  * [](https://x.com/Nasdaq "Visit NASDAQ on X")
+  * [](https://www.linkedin.com/company/nasdaq/ "Visit NASDAQ on LinkedIn")
+  * [](https://www.instagram.com/nasdaq "Visit NASDAQ on Instagram")
+  * [](https://www.pinterest.com/nasdaq/ "Visit NASDAQ on Pinterest")
+
+[ ](https://www.nasdaq.com/)
+© 2025, Nasdaq, Inc. All Rights Reserved.
+My Quotes
+  * [My Quotes](https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28#watchlist-tab-1)
+  * [My European Quotes](https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28#watchlist-tab-4)
+  * [Watchlist](https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28#watchlist-tab-2)
+  * [Portfolio](https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28#watchlist-tab-3)
+
+
+Add/Edit Symbols [View as Table](https://www.nasdaq.com/market-activity/recently-viewed-symbols)
+Add symbols now or see the quotes that matter to you, anywhere on Nasdaq.com. Start browsing [Stocks](https://www.nasdaq.com/market-activity/stocks), [Funds](https://www.nasdaq.com/market-activity/mutual-fund), [ETFs](https://www.nasdaq.com/market-activity/etf) and [more asset classes.](https://www.nasdaq.com/market-activity)
+/ 
+  * [ ](javascript:void\(0\);)
+
+
+Add/Edit Instruments [View as Table](https://www.nasdaq.com/my-european-quotes)
+Add instruments now or see the quotes that matter to you, anywhere on Nasdaq.com. Start browsing [Shares](https://www.nasdaq.com/european-market-activity/shares), [Indexes](https://www.nasdaq.com/european-market-activity/indexes), [ETP](https://www.nasdaq.com/european-market-activity/etp) and [more asset classes.](https://www.nasdaq.com/european-market-activity)
+/ 
+  * [ ](javascript:void\(0\);)
+
+
+Add/Edit Symbols [Edit Watchlist](https://www.nasdaq.com/account/watchlist)
+Your Watchlist is empty. Add/Edit Symbols
+Create your Watchlist to save your favorite quotes on Nasdaq.com. [Log in](https://www.nasdaq.com/user/login) or [create a free account](https://www.nasdaq.com/user/register) to get started.
+1/2
+  * [ ](javascript:void\(0\);)
+
+
+Outsmart the market with Smart Portfolio analytical tools powered by TipRanks. [Go to Smart Portfolio](https://www.nasdaq.com/user/login)
+Back Add a symbol to your watchlist
+Most Active
+By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. [Cookie Policy](https://www.nasdaq.com/cookie-statement)
+Cookies Settings Accept All Cookies
+prerender,Googlebot,Bingbot,Yandex
+Data is currently not available
+Search Nasdaq.com  Clear
+Search
+### We couldn’t find any results matching your search.
+Please try using other words for your search or explore other sections of the website for relevant information.
+### We’re sorry, we are currently experiencing some issues, please try again later.
+Our team is working diligently to resolve the issue. Thank you for your patience and understanding.
+[Show more results ->](https://www.nasdaq.com/search)
+Data is currently not available
+Edit My Quotes
+[ Add up to 25 symbols ](https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28#symbols-text-input)
+To add symbols:
+  * Type a symbol or company name. When the symbol you want to add appears, add it to My Quotes by selecting it and pressing Enter/Return.
+  * Copy and paste multiple symbols separated by spaces. 
+
+
+These symbols will be available throughout the site during your session.
+Save data
+Data is currently not available
+Edit My European Quotes
+[ Add up to 25 instruments ](https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28#symbols-text-input)
+To add instruments:
+  * Type a instrument or company name. When the instrument you want to add appears, add it to My European Quotes by selecting it and pressing Enter/Return.
+  * Copy and paste multiple instruments separated by spaces. 
+
+
+These instruments will be available throughout the site during your session.
+Save data
+Data is currently not available
+## Your symbols have been updated
+You'll now be able to see real-time price and activity for your symbols on the My Quotes of Nasdaq.com. 
+Continue
+Data is currently not available
+## Edit Watchlist
+[ Add up to 20 symbols ](https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28#symbols-text-input)
+To add symbols:
+  * Type a symbol or company name. When the symbol you want to add appears, add it to Watchlist by selecting it and pressing Enter/Return.
+  * Copy and paste multiple symbols separated by spaces. 
+
+
+These symbols will be available throughout the site during your session.
+Save data
+Data is currently not available
+## Opt in to Smart Portfolio
+We are currently experiencing technical difficulties, please try again.
+Smart Portfolio is supported by our partner TipRanks. By connecting my portfolio to TipRanks Smart Portfolio I agree to their [Terms of Use](https://portfolio.nasdaq.com/terms).
+Submit Cancel
+![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=ec8ffcae98c942369f460aaa4677cc9e&_biz_l=https%3A%2F%2Fwww.nasdaq.com%2Farticles%2Fare-pelotons-bikes-just-loss-leaders-2021-02-28&_biz_t=1748913143501&_biz_i=Are%20Peloton's%20Bikes%20Just%20Loss%20Leaders%3F%20%7C%20Nasdaq&_biz_n=0&rnd=841068&cdn_o=a&_biz_z=1748913145153)![](https://cdn.bizibly.com/u?_biz_u=ec8ffcae98c942369f460aaa4677cc9e&_biz_l=https%3A%2F%2Fwww.nasdaq.com%2Farticles%2Fare-pelotons-bikes-just-loss-leaders-2021-02-28&_biz_t=1748913145163&_biz_i=Are%20Peloton's%20Bikes%20Just%20Loss%20Leaders%3F%20%7C%20Nasdaq&rnd=776713&cdn_o=a&_biz_z=1748913145163)
+By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.[Cookie Policy](https://www.nasdaq.com/cookie-statement)
+Cookies Settings Accept All Cookies
+![Company Logo](https://www.nasdaq.com/themes/nsdq/onetrust/consent/578a06dd-f15c-46aa-8b1d-7dfe08fd6747/018f595a-41f1-7cd2-87ad-87cad3938cf0/logos/static/ot_company_logo.png)
+## Do Not Sell or Share My Personal Data
+When you visit our website, we store cookies on your browser to collect information. The information collected might relate to you, your preferences or your device, and is mostly used to make the site work as you expect it to and to provide a more personalized web experience. However, you can choose not to allow certain types of cookies, which may impact your experience of the site and the services we are able to offer. Click on the different category headings to find out more and change our default settings according to your preference. You cannot opt-out of our First Party Strictly Necessary Cookies as they are deployed in order to ensure the proper functioning of our website (such as prompting the cookie banner and remembering your settings, to log into your account, to redirect you when you log out, etc.). For more information about the First and Third Party Cookies used please follow this link. [More information](https://cookiepedia.co.uk/giving-consent-to-cookies)
+Allow All
+###  Manage Consent Preferences
+#### Strictly Necessary Cookies
+Always Active
+These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.
+#### Opt Out of Sale of Sharing/Targeted Advertising
+Opt Out of Sale of Sharing/Targeted Advertising
+As a California consumer, you have the right to opt-out from the sale or sharing of your personal information at any time across business platform, services, businesses and devices. You can opt-out of the sale and sharing of your personal information by using this toggle switch. As a Virginia, Utah, Colorado and Connecticut consumer, you have the right to opt-out from the sale of your personal data and the processing of your personal data for targeted advertising. You can opt-out of the sale of your personal data and targeted advertising by using this toggle switch. For more information on your rights as a United States consumer see our privacy notice.
+  * ##### Targeting Cookies
+Switch Label label
+These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.
+
+
+Back Button
+### Cookie List
+Search Icon
+Filter Icon
+Clear
+checkbox label label
+Apply Cancel
+Consent Leg.Interest
+checkbox label label
+checkbox label label
+checkbox label label
+Confirm My Choices
+[![Powered by Onetrust](https://www.nasdaq.com/themes/nsdq/onetrust/consent/578a06dd-f15c-46aa-8b1d-7dfe08fd6747/018f595a-41f1-7cd2-87ad-87cad3938cf0/logos/static/powered_by_logo.svg)](https://www.onetrust.com/products/cookie-consent/)

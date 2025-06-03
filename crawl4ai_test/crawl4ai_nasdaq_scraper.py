@@ -284,7 +284,7 @@ class NasdaqCrawler:
 async def main():
     """主函数"""
     # 示例URL
-    test_url = "https://finance.yahoo.com/m/dd155e6d-a988-38eb-aa92-6b15a5375838/u.s.-says-europe%E2%80%99s-tech-rules.html"
+    test_url = "https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28"
     
     # 创建爬虫实例
     crawler = NasdaqCrawler()
@@ -305,12 +305,10 @@ async def main():
         print(f"错误信息: {result.get('error', 'Unknown error')}")
     
     # 如果需要爬取多个URL，可以使用以下代码：
-    # urls = [
-    #     "https://www.nasdaq.com/articles/ipad-stocks-green-tint-2010-08-19",
-    #     "https://www.nasdaq.com/articles/another-article-url",
-    #     # 添加更多URL...
-    # ]
-    # results = await crawler.crawl_multiple_articles(urls, delay=3.0)
+    urls = [
+        "https://www.nasdaq.com/articles/are-pelotons-bikes-just-loss-leaders-2021-02-28"        # 添加更多URL...
+    ]
+    results = await crawler.crawl_multiple_articles(urls, delay=3.0)
 
 if __name__ == "__main__":
     # 运行爬虫
