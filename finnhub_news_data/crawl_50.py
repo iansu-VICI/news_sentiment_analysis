@@ -39,13 +39,14 @@ def get_random_user_agent():
     return random.choice(USER_AGENTS)
 
 
-def check_final_url_and_continue_reading(original_url, max_retries=3):
+def check_final_url_and_continue_reading(original_url, max_retries=3, timeout=10):
     """
     檢查原始URL的最終URL，並確認是否為Yahoo Finance頁面且有Continue Reading按鈕
     
     Args:
         original_url: 原始新聞URL
         max_retries: 最大重試次數
+        timeout: 頁面載入timeout秒數
         
     Returns:
         dict: {
@@ -70,13 +71,13 @@ def check_final_url_and_continue_reading(original_url, max_retries=3):
             print(f"檢測到Finnhub API URL，嘗試獲取真正的新聞URL...")
             
             try:
-                # 使用requests獲取API響應
+                # 使用requests獲取API響應（性能優化：降低timeout）
                 headers = {
                     'User-Agent': get_random_user_agent(),
                     'Accept': 'application/json, text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
                 }
                 
-                response = requests.get(original_url, headers=headers, timeout=10, allow_redirects=True)
+                response = requests.get(original_url, headers=headers, timeout=5, allow_redirects=True)  # 降低timeout從10到5
                 
                 if response.status_code == 200:
                     # 檢查是否是JSON響應
@@ -158,19 +159,37 @@ def check_final_url_and_continue_reading(original_url, max_retries=3):
         print(f"檢測到Yahoo Finance頁面，檢查Continue Reading按鈕...")
         
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
+            # 性能優化：瀏覽器配置
+            browser = p.chromium.launch(
+                headless=True,
+                args=[
+                    '--no-sandbox',
+                    '--disable-dev-shm-usage',
+                    '--disable-gpu',
+                    '--disable-features=VizDisplayCompositor',
+                    '--disable-background-timer-throttling',
+                    '--disable-backgrounding-occluded-windows',
+                    '--disable-renderer-backgrounding'
+                ]
+            )
             context = browser.new_context(
                 user_agent=get_random_user_agent(),
-                viewport={'width': 1920, 'height': 1080}
+                viewport={'width': 1280, 'height': 720},  # 降低解析度以提升性能
+                ignore_https_errors=True,  # 忽略SSL錯誤
+                java_script_enabled=True  # 確保JS啟用（某些頁面需要）
             )
             page = context.new_page()
+            
+            # 性能優化：阻擋不必要的資源載入
+            page.route('**/*.{png,jpg,jpeg,gif,svg,ico,woff,woff2,ttf,eot}', lambda route: route.abort())
+            page.route('**/*.css', lambda route: route.abort())  # 阻擋CSS（如果不影響功能的話）
             
             for attempt in range(max_retries):
                 try:
                     print(f"嘗試訪問Yahoo Finance URL: {target_url}")
                     
-                    # 導航到頁面
-                    response = page.goto(target_url, wait_until='domcontentloaded', timeout=15000)
+                    # 導航到頁面（性能優化：使用動態timeout）
+                    response = page.goto(target_url, wait_until='domcontentloaded', timeout=timeout*1000)  # 轉換為毫秒
                     
                     if response is None:
                         result['error_message'] = f"無法導航到URL (嘗試 {attempt + 1}/{max_retries})"
@@ -180,36 +199,73 @@ def check_final_url_and_continue_reading(original_url, max_retries=3):
                     result['final_url'] = page.url
                     print(f"Yahoo Finance最終URL: {result['final_url']}")
                     
-                    # 等待頁面完全載入
+                    # 性能優化：縮短等待時間（使用動態timeout）
                     try:
-                        page.wait_for_load_state('networkidle', timeout=8000)
+                        page.wait_for_load_state('networkidle', timeout=max(3000, timeout*300))  # 最少3秒，或timeout的30%
                     except:
-                        pass  # 如果等待超時也沒關係，繼續檢查
+                        # 如果等待超時，嘗試等待DOM穩定
+                        try:
+                            page.wait_for_timeout(min(1000, timeout*100))  # 等待時間不超過timeout的10%
+                        except:
+                            pass
                     
-                    # 檢查Continue Reading按鈕
+                    # 檢查Continue Reading按鈕（修正：使用更精確的選擇器）
                     continue_reading_selectors = [
-                        "text='Continue Reading'",
-                        "text='Read More'",
-                        "[data-test*='continue']",
-                        "[data-testid*='continue']",
-                        "a:has-text('Continue')",
-                        "button:has-text('Continue')",
+                        # 最精確的選擇器（根據真實 Yahoo Finance 按鈕特徵）
+                        ".continue-reading-button",  # 真實的 Continue Reading 按鈕 class
+                        "a.continue-reading-button",  # 確保是 <a> 標籤
+                        "[aria-label='Continue Reading']",  # 精確的 aria-label 匹配
+                        "[title='Continue Reading']",  # 精確的 title 匹配
+                        "[data-ylk*='Continue%20Reading']",  # data-ylk 屬性包含 Continue Reading
+                        "a[aria-label='Continue Reading']",  # 確保是 <a> 標籤的 aria-label
+                        "a[title='Continue Reading']",  # 確保是 <a> 標籤的 title
+                        
+                        # 較寬鬆的選擇器（備用）
+                        "a[aria-label*='Continue Reading']",  # aria-label 包含 Continue Reading
+                        "a[title*='Continue Reading']",  # title 包含 Continue Reading
+                        "a:has-text('Continue Reading')",  # 精確文字匹配
+                        "a:has-text('Continue reading')",  # 小寫版本
+                        "button[aria-label*='Continue Reading']",
+                        "button[title*='Continue Reading']",
+                        "button:has-text('Continue Reading')",
+                        "button:has-text('Continue reading')",
+                        
+                        # 通用選擇器（最後備用）
                         ".continue-reading",
-                        ".continue-reading-button",
                         ".story-continues",
-                        "a[title='Continue Reading']",
-                        "button[title='Continue Reading']",
-                        "a[aria-label='Continue Reading']"
+                        "[data-test*='continue-reading']",
+                        "[data-testid*='continue-reading']",
+                        "text='Continue Reading'",
+                        "text='Continue reading'",
+                        "text='Read More'"
                     ]
                     
                     continue_button = None
+                    found_selector = None
                     for selector in continue_reading_selectors:
                         try:
                             continue_button = page.locator(selector).first
                             if continue_button.count() > 0:
-                                print(f"找到Continue Reading按鈕: {selector}")
+                                found_selector = selector
+                                print(f"✅ 找到Continue Reading按鈕: {selector}")
+                                
+                                # 詳細記錄按鈕屬性（用於調試）
+                                try:
+                                    tag_name = continue_button.evaluate("el => el.tagName.toLowerCase()")
+                                    class_name = continue_button.get_attribute('class') or ''
+                                    aria_label = continue_button.get_attribute('aria-label') or ''
+                                    title = continue_button.get_attribute('title') or ''
+                                    href = continue_button.get_attribute('href') or ''
+                                    print(f"   標籤: {tag_name}")
+                                    print(f"   Class: {class_name}")
+                                    print(f"   Aria-label: {aria_label}")
+                                    print(f"   Title: {title}")
+                                    print(f"   Href: {href[:100]}..." if len(href) > 100 else f"   Href: {href}")
+                                except Exception as debug_e:
+                                    print(f"   無法獲取按鈕詳細信息: {debug_e}")
+                                
                                 break
-                        except:
+                        except Exception as e:
                             continue
                     
                     has_continue_reading = continue_button and continue_button.count() > 0
@@ -220,6 +276,10 @@ def check_final_url_and_continue_reading(original_url, max_retries=3):
                             # 檢查是否是<a>標籤並有href屬性
                             href = continue_button.get_attribute('href')
                             if href:
+                                # HTML 解碼 (處理 &amp; 等實體)
+                                import html
+                                href = html.unescape(href)
+                                
                                 # 將相對URL轉換為絕對URL
                                 if href.startswith('/'):
                                     base_url = f"https://{urllib.parse.urlparse(result['final_url']).netloc}"
@@ -232,17 +292,15 @@ def check_final_url_and_continue_reading(original_url, max_retries=3):
                                     base_url = f"https://{urllib.parse.urlparse(result['final_url']).netloc}"
                                     href = urllib.parse.urljoin(base_url, href)
                                 
-                                print(f"Continue Reading按鈕指向: {href}")
+                                print(f"🔗 Continue Reading按鈕指向: {href}")
                                 # 更新最終URL為Continue Reading的目標
                                 result['final_url'] = href
-                                # 重新訪問真正的文章頁面
-                                try:
-                                    page.goto(result['final_url'], wait_until='domcontentloaded', timeout=10000)
-                                    print(f"已跳轉到真正的文章頁面: {result['final_url']}")
-                                except Exception as e:
-                                    print(f"跳轉到文章頁面失敗: {e}")
+                                print(f"✅ 已更新最終URL為真正的文章頁面")
+                                # 注意：這裡不再重新訪問頁面，因為我們只需要URL
                         except Exception as e:
-                            print(f"提取Continue Reading href失敗: {e}")
+                            print(f"❌ 提取Continue Reading href失敗: {e}")
+                    else:
+                        print(f"📄 未找到Continue Reading按鈕（測試了 {len(continue_reading_selectors)} 個選擇器）")
                     
                     result['has_continue_reading'] = has_continue_reading
                     status = "📰 Yahoo Finance" if 'yahoo.com' in result['final_url'] else "🌐 其他網站"
@@ -271,7 +329,7 @@ def check_final_url_and_continue_reading(original_url, max_retries=3):
     
     return result
 
-def display_company_news(symbol, from_date=None, to_date=None, download_articles=False, output_dir="downloaded_articles", headless=True):
+def display_company_news(symbol, from_date=None, to_date=None, download_articles=False, output_dir="downloaded_articles", headless=True, batch_size=10, yahoo_delay=0.3, other_delay=0.1, max_retries=3, timeout=10):
     """
     取得並顯示特定公司的新聞，只保存基本資訊到JSON文件
     
@@ -282,6 +340,11 @@ def display_company_news(symbol, from_date=None, to_date=None, download_articles
         download_articles: 此參數在新版本中被忽略
         output_dir: JSON文件保存目錄
         headless: 是否使用無頭模式運行瀏覽器
+        batch_size: 進度報告批次大小
+        yahoo_delay: Yahoo Finance頁面處理間隔秒數
+        other_delay: 其他頁面處理間隔秒數
+        max_retries: URL檢查最大重試次數
+        timeout: 頁面載入timeout秒數
     """
     # 如果未指定日期範圍，預設為2021-01-01到2025-05-28
     if from_date is None or to_date is None:
@@ -303,49 +366,73 @@ def display_company_news(symbol, from_date=None, to_date=None, download_articles
         print(f"\n開始處理新聞資料...")
         processed_count = 0
         filtered_count = 0  # 被過濾掉的數量
+        error_count = 0  # 錯誤數量統計
+        
+        # 性能優化：批次處理和進度報告
+        start_time = time.time()
         
         for i, news_item in enumerate(company_news):
             original_url = news_item.get('url')
             if not original_url:
                 continue
+            
+            # 性能優化：進度報告
+            if i % batch_size == 0 and i > 0:
+                elapsed_time = time.time() - start_time
+                avg_time_per_item = elapsed_time / i
+                remaining_items = len(company_news) - i
+                estimated_remaining_time = avg_time_per_item * remaining_items
+                print(f"\n📊 進度報告 ({i}/{len(company_news)})")
+                print(f"   已處理: {processed_count} | 過濾: {filtered_count} | 錯誤: {error_count}")
+                print(f"   平均處理時間: {avg_time_per_item:.2f}秒/項")
+                print(f"   預估剩餘時間: {estimated_remaining_time/60:.1f}分鐘")
                 
             print(f"\n處理新聞 {i+1}/{len(company_news)}: {original_url[:80]}...")
             
-            # 檢查最終URL和Continue Reading按鈕
-            url_check_result = check_final_url_and_continue_reading(original_url)
-            
-            # 檢查是否成功解析出不同的final_url
-            if url_check_result['final_url'] == original_url:
-                filtered_count += 1
-                print(f"  ⚠️  跳過：original_url與final_url相同，可能解析失敗")
+            try:
+                # 檢查最終URL和Continue Reading按鈕
+                url_check_result = check_final_url_and_continue_reading(original_url, max_retries, timeout)
+                
+                # 檢查是否成功解析出不同的final_url
+                if url_check_result['final_url'] == original_url:
+                    filtered_count += 1
+                    print(f"  ⚠️  跳過：original_url與final_url相同，可能解析失敗")
+                    continue
+                
+                # 準備新聞資料
+                news_info = {
+                    'headline': news_item.get('headline'),
+                    'source': news_item.get('source'),
+                    'datetime': news_item.get('datetime'),
+                    'publish_date': datetime.fromtimestamp(news_item.get('datetime')).strftime('%Y-%m-%d %H:%M:%S'),
+                    'original_url': original_url,
+                    'final_url': url_check_result['final_url'],
+                    'is_yahoo_finance': url_check_result['is_yahoo_finance'],
+                    'has_continue_reading': url_check_result['has_continue_reading'],
+                    'url_check_status': url_check_result['status'],
+                    'url_check_error': url_check_result.get('error_message')
+                }
+                
+                news_data.append(news_info)
+                processed_count += 1
+                
+                # 顯示處理結果
+                status_msg = "✅" if url_check_result['status'] == 'success' else "🔄" if url_check_result['status'] == 'partial_success' else "❌"
+                yahoo_msg = "📰 Yahoo Finance" if url_check_result['is_yahoo_finance'] else "🌐 其他網站"
+                continue_msg = "📖 有Continue Reading" if url_check_result['has_continue_reading'] else "📄 無Continue Reading"
+                
+                print(f"  {status_msg} {yahoo_msg}, {continue_msg}")
+                
+            except Exception as e:
+                error_count += 1
+                print(f"  ❌ 處理新聞時發生錯誤: {e}")
                 continue
             
-            # 準備新聞資料
-            news_info = {
-                'headline': news_item.get('headline'),
-                'source': news_item.get('source'),
-                'datetime': news_item.get('datetime'),
-                'publish_date': datetime.fromtimestamp(news_item.get('datetime')).strftime('%Y-%m-%d %H:%M:%S'),
-                'original_url': original_url,
-                'final_url': url_check_result['final_url'],
-                'is_yahoo_finance': url_check_result['is_yahoo_finance'],
-                'has_continue_reading': url_check_result['has_continue_reading'],
-                'url_check_status': url_check_result['status'],
-                'url_check_error': url_check_result.get('error_message')
-            }
-            
-            news_data.append(news_info)
-            processed_count += 1
-            
-            # 顯示處理結果
-            status_msg = "✅" if url_check_result['status'] == 'success' else "🔄" if url_check_result['status'] == 'partial_success' else "❌"
-            yahoo_msg = "📰 Yahoo Finance" if url_check_result['is_yahoo_finance'] else "🌐 其他網站"
-            continue_msg = "📖 有Continue Reading" if url_check_result['has_continue_reading'] else "📄 無Continue Reading"
-            
-            print(f"  {status_msg} {yahoo_msg}, {continue_msg}")
-            
-            # 避免請求過於頻繁
-            time.sleep(0.5)
+            # 性能優化：減少等待時間，只在Yahoo Finance檢查時等待
+            if url_check_result.get('is_yahoo_finance', False):
+                time.sleep(yahoo_delay)
+            else:
+                time.sleep(other_delay)
         
         # 保存到JSON文件
         output_file = os.path.join(output_dir, f"{symbol.lower()}.json")
@@ -434,14 +521,14 @@ def display_market_news(category="general", min_id=0):
 
 def parse_args():
     """解析命令列參數"""
-    parser = argparse.ArgumentParser(description='獲取金融新聞')
+    parser = argparse.ArgumentParser(description='獲取金融新聞（優化版）')
     parser.add_argument('--type', type=str, choices=['company', 'market'], default='company',
                       help='新聞類型: company (公司新聞) 或 market (市場新聞)')
-    parser.add_argument('--symbol', type=str, default='SOFI',
+    parser.add_argument('--symbol', type=str, default='NVDA',
                       help='公司股票代碼 (預設: AAPL)')
-    parser.add_argument('--from-date', type=str, default='2021-01-01',
-                      help='起始日期 (YYYY-MM-DD格式，預設: 2025-0-01)')
-    parser.add_argument('--to-date', type=str, default='2021-01-30',
+    parser.add_argument('--from-date', type=str, default='2021-05-01',
+                      help='起始日期 (YYYY-MM-DD格式，預設: 2025-03-01)')
+    parser.add_argument('--to-date', type=str, default='2021-05-30',
                       help='結束日期 (YYYY-MM-DD格式，預設: 2025-04-01)')
     parser.add_argument('--category', type=str, default='general',
                       choices=['general', 'forex', 'crypto', 'merger'],
@@ -454,6 +541,22 @@ def parse_args():
                       help='文章保存目錄 (預設: downloaded_articles)')
     parser.add_argument('--no-headless', action='store_true',
                       help='使用有頭模式運行瀏覽器 (預設: 無頭模式)')
+    
+    # 性能優化參數
+    parser.add_argument('--batch-size', type=int, default=10,
+                      help='進度報告批次大小 (預設: 10)')
+    parser.add_argument('--yahoo-delay', type=float, default=0.3,
+                      help='Yahoo Finance頁面處理間隔秒數 (預設: 0.3)')
+    parser.add_argument('--other-delay', type=float, default=0.1,
+                      help='其他頁面處理間隔秒數 (預設: 0.1)')
+    parser.add_argument('--max-retries', type=int, default=3,
+                      help='URL檢查最大重試次數 (預設: 3)')
+    parser.add_argument('--timeout', type=int, default=10,
+                      help='頁面載入timeout秒數 (預設: 10)')
+    
+    # 測試參數
+    parser.add_argument('--test-continue-reading', action='store_true',
+                      help='測試 Continue Reading 按鈕檢測功能')
     
     args = parser.parse_args()
     
@@ -472,6 +575,29 @@ def parse_args():
     
     return args
 
+# --- 測試函數 ---
+def test_continue_reading_detection():
+    """測試 Continue Reading 按鈕檢測功能"""
+    test_urls = [
+        # 已知包含 Continue Reading 按鈕的 Yahoo Finance URL
+        "https://finance.yahoo.com/m/727d6b2f-4189-33bc-a491-8ea5cdc6cb33/forget-electric-vehicle.html",
+        "https://finance.yahoo.com/news/nvidia-latest-dip-offers-pre-154224134.html"
+    ]
+    
+    print("🧪 測試 Continue Reading 按鈕檢測功能...")
+    
+    for test_url in test_urls:
+        print(f"\n測試URL: {test_url}")
+        result = check_final_url_and_continue_reading(test_url, max_retries=2, timeout=15)
+        
+        print(f"結果:")
+        print(f"  最終URL: {result['final_url']}")
+        print(f"  是Yahoo Finance: {result['is_yahoo_finance']}")
+        print(f"  有Continue Reading: {result['has_continue_reading']}")
+        print(f"  狀態: {result['status']}")
+        if result.get('error_message'):
+            print(f"  錯誤: {result['error_message']}")
+
 # --- 使用範例 ---
 if __name__ == "__main__":
     if API_KEY == "YOUR_FINNHUB_API_KEY":
@@ -482,10 +608,26 @@ if __name__ == "__main__":
         args = parse_args()
         
         try:
+            # 測試模式
+            if args.test_continue_reading:
+                test_continue_reading_detection()
+                exit(0)
+            
             # 根據新聞類型調用相應的函式
             if args.type == 'company':
-                result = display_company_news(args.symbol, args.from_date, args.to_date, 
-                                            args.download_articles, args.output_dir, args.headless)
+                result = display_company_news(
+                    symbol=args.symbol, 
+                    from_date=args.from_date, 
+                    to_date=args.to_date, 
+                    download_articles=args.download_articles, 
+                    output_dir=args.output_dir, 
+                    headless=args.headless,
+                    batch_size=args.batch_size,
+                    yahoo_delay=args.yahoo_delay,
+                    other_delay=args.other_delay,
+                    max_retries=args.max_retries,
+                    timeout=args.timeout
+                )
                 
                 # 檢查結果並決定退出碼
                 if result is not None and len(result) > 0:
