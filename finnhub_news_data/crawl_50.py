@@ -209,34 +209,78 @@ def check_final_url_and_continue_reading(original_url, max_retries=3, timeout=10
                         except:
                             pass
                     
-                    # 檢查Continue Reading按鈕（修正：使用更精確的選擇器）
+                    # 改善：增加額外等待時間確保頁面完全載入
+                    print(f"等待頁面完全載入...")
+                    try:
+                        # 等待任何潛在的AJAX請求完成
+                        page.wait_for_timeout(2000)  # 額外等待2秒
+                        
+                        # 等待特定元素出現（Yahoo Finance特有的元素）
+                        try:
+                            page.wait_for_selector("main, article, .content, .story", timeout=5000)
+                        except:
+                            print("未找到主要內容元素，但繼續處理...")
+                    except:
+                        pass
+                    
+                    # 改善：先調試頁面內容
+                    print(f"調試頁面內容...")
+                    try:
+                        # 檢查頁面標題
+                        title = page.title()
+                        print(f"頁面標題: {title}")
+                        
+                        # 檢查是否有任何包含 'continue' 或 'reading' 的元素
+                        debug_elements = page.locator("*:has-text('Continue'), *:has-text('Reading'), *:has-text('continue'), *:has-text('reading')")
+                        debug_count = debug_elements.count()
+                        print(f"包含 'continue/reading' 文字的元素數量: {debug_count}")
+                        
+                        if debug_count > 0:
+                            for i in range(min(debug_count, 5)):  # 只檢查前5個
+                                try:
+                                    element = debug_elements.nth(i)
+                                    tag_name = element.evaluate("el => el.tagName.toLowerCase()")
+                                    text_content = element.inner_text()[:50]
+                                    class_name = element.get_attribute('class') or ''
+                                    print(f"  元素 {i+1}: <{tag_name}> class='{class_name}' text='{text_content}'")
+                                except:
+                                    continue
+                    except Exception as debug_e:
+                        print(f"調試時出錯: {debug_e}")
+                    
+                    # 檢查Continue Reading按鈕（改善：根據真實HTML結構）
                     continue_reading_selectors = [
-                        # 最精確的選擇器（根據真實 Yahoo Finance 按鈕特徵）
-                        ".continue-reading-button",  # 真實的 Continue Reading 按鈕 class
-                        "a.continue-reading-button",  # 確保是 <a> 標籤
-                        "[aria-label='Continue Reading']",  # 精確的 aria-label 匹配
-                        "[title='Continue Reading']",  # 精確的 title 匹配
-                        "[data-ylk*='Continue%20Reading']",  # data-ylk 屬性包含 Continue Reading
-                        "a[aria-label='Continue Reading']",  # 確保是 <a> 標籤的 aria-label
-                        "a[title='Continue Reading']",  # 確保是 <a> 標籤的 title
+                        # 根據用戶提供的真實HTML結構優化的選擇器
+                        "a.continue-reading-button",  # 最精確匹配
+                        ".continue-reading-button",  # class匹配
+                        "a[class*='continue-reading-button']",  # 包含該class的a標籤
+                        "a.secondary-btn-link.continue-reading-button",  # 多class匹配
+                        "a[data-ylk*='Continue%20Reading']",  # data-ylk屬性匹配
+                        "a[data-ylk*='Continue Reading']",  # data-ylk屬性匹配（未編碼）
                         
-                        # 較寬鬆的選擇器（備用）
-                        "a[aria-label*='Continue Reading']",  # aria-label 包含 Continue Reading
-                        "a[title*='Continue Reading']",  # title 包含 Continue Reading
-                        "a:has-text('Continue Reading')",  # 精確文字匹配
-                        "a:has-text('Continue reading')",  # 小寫版本
-                        "button[aria-label*='Continue Reading']",
-                        "button[title*='Continue Reading']",
-                        "button:has-text('Continue Reading')",
-                        "button:has-text('Continue reading')",
+                        # 精確的屬性匹配
+                        "a[aria-label='Continue Reading']",
+                        "a[title='Continue Reading']",
+                        "[aria-label='Continue Reading']",
+                        "[title='Continue Reading']",
                         
-                        # 通用選擇器（最後備用）
+                        # 較寬鬆的選擇器
+                        "a[aria-label*='Continue Reading']",
+                        "a[title*='Continue Reading']",
+                        "a:has-text('Continue Reading')",
+                        "a:has-text('Continue reading')",
+                        
+                        # 通用文字匹配
+                        ":text('Continue Reading')",
+                        ":text-is('Continue Reading')",
+                        "*:has-text('Continue Reading'):not(script):not(style)",
+                        
+                        # 更寬泛的選擇器（備用）
                         ".continue-reading",
-                        ".story-continues",
-                        "[data-test*='continue-reading']",
-                        "[data-testid*='continue-reading']",
+                        "[class*='continue-reading']",
+                        "button:has-text('Continue Reading')",
+                        "button[aria-label*='Continue Reading']",
                         "text='Continue Reading'",
-                        "text='Continue reading'",
                         "text='Read More'"
                     ]
                     
